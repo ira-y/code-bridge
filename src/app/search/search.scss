@@ -1,0 +1,57 @@
+.filter-label {
+  font-size: 21px;
+  font-weight: 600;
+  color: #363636;
+  margin-bottom: 12px;
+}
+
+.lookup-form {
+  width: 50%;
+  margin-bottom: 25px;
+}
+
+.lookup-field {
+  width: 100%;
+
+  ::ng-deep .mdc-notched-outline {
+    border: none !important;
+  }
+
+  ::ng-deep .mdc-notched-outline__leading,
+  ::ng-deep .mdc-notched-outline__notch,
+  ::ng-deep .mdc-notched-outline__trailing {
+    border: none !important;
+  }
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e5e7eb;
+    height: 60px;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  .mat-icon {
+    color: #575757;
+    font-size: 24px;
+  }
+
+  input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    color: #575757;
+    height: 48px;
+
+    &::placeholder {
+      color: #6b7280;
+    }
+  }
+
+  &:hover ::ng-deep .mat-mdc-text-field-wrapper {
+    border-color: #d1d5db;
+  }
+
+  &.mat-focused ::ng-deep .mat-mdc-text-field-wrapper {
+    border-color: #d1d5db;
+  }
+}

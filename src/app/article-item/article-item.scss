@@ -1,0 +1,122 @@
+.post-card {
+  width: 540px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15), 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+}
+
+.post-card-header {
+  padding: 0;
+  margin: 0;
+}
+
+.thumb-box {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #66d0ea 0%, #7c00f8 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
+.post-card-content {
+  height: 300px;
+  padding: 24px;
+}
+
+.published-date {
+  color: #C2C2C2;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+.calendar-icon {
+  color: #C2C2C2;
+  font-size: 17px;
+  height: 16px;
+  width: 15px;
+  padding-right: 10px;
+}
+
+.post-summary {
+  color: #757575;
+  line-height: 1.5;
+  margin-bottom: 16px !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-card-actions {
+  padding: 0 24px 16px;
+}
+
+.see-more {
+  font-size: 20px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    transform: translateX(2px);
+  }
+}
+
+:host ::ng-deep .search-highlight {
+  background-color: #FFF96E !important;
+  border-radius: 2px !important;
+}
+
+:host ::ng-deep .mat-mdc-card-title {
+  margin-bottom: 25px !important;
+  font-size: 32px !important;
+  font-weight: 300 !important;
+  line-height: 1.2 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+:host ::ng-deep .mat-mdc-card-subtitle {
+  margin-bottom: 16px !important;
+  color: #757575 !important;
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+:host ::ng-deep .mat-mdc-card-actions {
+  margin-top: 15px !important;
+  display: flex !important;
+  padding: 0 24px 16px !important;
+}
+
+.forward-icon {
+  font-weight: 100px !important;
+}

@@ -1,0 +1,22 @@
+.posts-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  gap: 50px;
+  margin-bottom: 40px !important;
+}
+
+.divider-line {
+  border: 1px solid #EFEFEF;
+  margin-top: 5px;
+}
+
+.results-info {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.bottom-space {
+  height: 10px;
+}

@@ -1,0 +1,25 @@
+@if(chosenPost$ | async; as chosenPost) {
+  <div class="post-details">
+    <div class="top-banner">
+      <img src="{{ chosenPost?.image_url }}">
+    </div>
+    <div class="body-container">
+      <div class="body-card">
+        <div class="headline-box">
+          <div class="headline">{{ chosenPost?.title }}</div>
+        </div>
+
+        <div class="post-text">{{ chosenPost?.text }}</div>
+        <a href="{{chosenPost?.url}}" target="_blank">Continue reading...</a>
+      </div>
+
+      <div (click)="goBack()" class="back-link">
+        <mat-icon class="back-icon">arrow_back</mat-icon>
+        Return to main page
+      </div>
+    </div>
+  </div>
+
+} @else {
+  <p class="loading-state">Please wait...</p>
+}

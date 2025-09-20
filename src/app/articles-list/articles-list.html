@@ -1,0 +1,22 @@
+<div class="posts-container">
+  <div>
+    <div class="results-info">Found: {{ totalCount$ | async }}</div>
+    <div class="divider-line"></div>
+  </div>
+
+  @if((postList$ | async)?.length && !(loadingPosts$ | async)) {
+    <div class="posts-grid">
+      @for (post of (postList$ | async); track post.id) {
+        <app-article-item
+          [article]="post"
+          [searchRequest]="currentSearch$ | async"
+        ></app-article-item>
+      }
+    </div>
+  }
+</div>
+<div class="bottom-space"></div>
+
+@if (loadingPosts$ | async) {
+  <p>Please wait...</p>
+}

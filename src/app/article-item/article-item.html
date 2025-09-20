@@ -1,0 +1,30 @@
+<mat-card class="post-card" (click)="handleCardClick()">
+  <mat-card-header class="post-card-header">
+    <div class="thumb-box">
+      <img src="{{ article.image_url }}">
+    </div>
+  </mat-card-header>
+
+  <mat-card-content class="post-card-content">
+    <div class="date-box">
+      <div class="published-date">
+        <mat-icon class="calendar-icon" matPrefix>calendar_month</mat-icon>
+        {{ article.published_at | date:'MMMM d, y'}}
+      </div>
+    </div>
+
+    <mat-card-title class="post-title"
+        [innerHTML]="article.title | highlightSearch:searchRequest">
+    </mat-card-title>
+
+    <mat-card-subtitle class="post-summary"
+        [innerHTML]="article.summary | highlightSearch:searchRequest">
+    </mat-card-subtitle>
+  </mat-card-content>
+
+  <mat-card-actions class="post-card-actions">
+    <div class="see-more" (click)="handleCardClick()">
+      See details <mat-icon class="forward-icon">arrow_forward</mat-icon>
+    </div>
+  </mat-card-actions>
+</mat-card>
